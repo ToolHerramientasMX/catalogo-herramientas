@@ -38,6 +38,23 @@
             td:nth-child(7), th:nth-child(7) { order: 6; }
             .top-bar a { margin: 10px 0; width: 100%; }
         }
+        .social-buttons {
+            position: fixed; /* Fija los botones al hacer scroll */
+            top: 20px; /* Espacio desde el top */
+            left: 20px; /* Espacio desde la izquierda */
+            display: flex;
+            gap: 10px;
+            z-index: 1000; /* Asegura que los botones queden por encima de otros elementos */
+        }
+        .social-buttons a {
+            color: #000;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-buttons a:hover {
+            color: #d00000;
+        }
     </style>
     <script>
         let currentIndex = 10;
@@ -114,6 +131,12 @@
 <body>
 
 <div class="container">
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/ToolHerramientasMX" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="https://www.instagram.com/ToolHerramientasMX" target="_blank" class="fab fa-instagram"></a>
+    </div>
+
     <div class="top-bar">
         <h1 style="font-size: 28px; font-weight: 700; color: #d00000;">Tool Herramientas MX</h1>
         <h1 style="font-size: 24px; font-weight: 700; color: #d00000; margin-top: -20px;">Outlet</h1> <!-- Se agrega Outlet con el mismo tamaño, peso y color -->
